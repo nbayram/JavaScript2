@@ -1,0 +1,72 @@
+/* Automatically given margin and padding values are reset for the whole page. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Since only two colors are used on the entire page, 
+the colors are assigned to the elements as classes. */
+.orange-bg {
+  background-color: orange;
+}
+
+.orange {
+  color: orange;
+}
+
+.white-bg {
+  background-color: white;
+}
+
+.white {
+  color: white;
+}
+
+#inbox {
+  margin: 10rem auto 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  width: 70rem;
+  height: 30rem;
+}
+
+blockquote {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: justify; /* More beautiful appearance */
+}
+
+/* The double quote mark is given on the css page as a pseudo character. */
+blockquote:before {
+  content: '\201C';
+  font-size: 8rem;
+}
+
+figcaption {
+  text-align: right;
+  font-size: 2rem;
+}
+
+#bottombox {
+  display: flex;
+  justify-content: space-between;
+}
+
+#leftdiv i {
+  font-size: 3rem;
+}
+
+button {
+  width: 7rem;
+  font-size: 1rem;
+  height: 100%;
+}
+
+#smallbox {
+  width: 20rem;
+  height: 3rem;
+  margin: auto;
+}

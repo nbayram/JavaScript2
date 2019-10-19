@@ -24,7 +24,15 @@
   }
 
   // Have the function execute when it's loading in the browser
-  window.setInterval(updateClock, 1000);
+  // window.setInterval(updateClock, 1000);
 
+  // Call the function after the page load
+  window.addEventListener('load', () => {
+
+    // Call the function once because setInterval execute after a second
+    // Then execute setInterval
+    updateClock();
+    window.setInterval(updateClock, 1000);
+  });
 }
 

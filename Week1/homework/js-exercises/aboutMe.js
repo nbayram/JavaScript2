@@ -17,9 +17,10 @@
   hometown.textContent = 'Zutphen';
 
   // Iterate through each li and change the class to "list-item".
-  const ul = document.getElementsByTagName('ul');
-  for (const elm of ul) {
-    elm.className += 'list-item';
+  // Iterate <li> tags instead of the <ul>
+  const li = document.querySelectorAll('li');
+  for (const element of li) {
+    element.className += 'list-item';
   }
 
   // Create a new img element and set its src attribute to a picture of you.

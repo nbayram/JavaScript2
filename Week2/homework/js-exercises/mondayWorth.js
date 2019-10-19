@@ -30,10 +30,7 @@
 
     // Sum it all up.
     // Output a formatted Euro amount, rounded to Euro cents, e.g: €11.34.
-
-    // Add euro symbol!!!
-    const SumEachPrijs = eachPrijs.reduce((acc, cur) => acc + cur);
-    return SumEachPrijs;
+    return `€${eachPrijs.reduce((acc, cur) => acc + cur)}`;
   }
   // Make sure the program can be used on any array of objects
   // That contain a duration property with a number value

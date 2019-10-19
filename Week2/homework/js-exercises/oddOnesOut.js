@@ -15,15 +15,9 @@
 
   const myNumbers = [1, 2, 3, 4];
 
-  function doubleEvenNumbers(arr) {
+  function doubleEvenNumbers(numbers) {
 
-    // Above code doesn't work! Ternary warning!
-    // const evenNumbers = myNumbers.filter(numbers => (numbers % 2 === 0) ? numbers);
-    const evenNumbers = arr.filter(elem => { // Get the even numbers with filter function
-      if (elem % 2 === 0) {
-        return elem;
-      }
-    });
+    const evenNumbers = numbers.filter(elem => elem % 2 === 0); // Get the even numbers with filter function
 
     return evenNumbers.map(xTwo => xTwo * 2); // Multiply 2 each elemans of the array with map function
   };

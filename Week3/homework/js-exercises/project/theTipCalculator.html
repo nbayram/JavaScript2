@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./theTipCalculator.css" />
+    <title>The Tip Calculator</title>
+  </head>
+  <body>
+    <div id="main">
+      <h2>TIP CALCULATOR</h2>
+      <div id="container">
+        <div id="firstbox">
+          <h3>How much was your bill?</h3>
+          <div class="explain">
+            <span>$</span>
+            <input type="text" />
+          </div>
+        </div>
+        <div id="secondbox">
+          <h3>How was your service?</h3>
+          <select name="options" id="serviceRate">
+            <option value="0">-- Choose an Option --</option>
+            <option value="0.3">30%-Outstanding</option>
+            <option value="0.2">20%-Good</option>
+            <option value="0.15">15%-It was OK</option>
+            <option value="0.1">10%-Bad</option>
+            <option value="0.05">5%-Terrible</option>
+          </select>
+        </div>
+        <div id="thirdbox">
+          <h3>How many people are sharing the bill?</h3>
+          <div class="explain">
+            <input type="text" />
+            <span>people</span>
+          </div>
+        </div>
+        <div id="button">
+          <button>CALCULATE!</button>
+        </div>
+        <div id="summary">
+          <p>TIP AMOUNT</p>
+          <p>$<span id="money"></span></p>
+          <span id="each"></span>
+        </div>
+      </div>
+    </div>
+    <script src="./theTipCalculator.js"></script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: darkred;
+}
+
+#main {
+  background: white;
+  margin: 10rem 10rem;
+  height: 30rem;
+  border-radius: 5%;
+  text-align: center;
+}
+
+h2 {
+  background: black;
+  color: white;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+button {
+  background: darkred;
+  color: white;
+  padding: 1rem;
+}
+
+#firstbox,
+#secondbox,
+#thirdbox,
+button {
+  margin-bottom: 1rem;
+}

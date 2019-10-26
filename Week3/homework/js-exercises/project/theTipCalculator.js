@@ -1,36 +1,34 @@
 'use strict';
 
 {
-  const billAmount = document.querySelector('#firstbox input').value;
-  const serviceRate = document.getElementById('serviceRate').value;
-  const numberOfWaiters = document.querySelector('#thirdbox input').value;
+  const billInput = document.querySelector('#firstbox input');
+  const serviceSelect = document.querySelector('select');
+  const shareInput = document.querySelector('#thirdbox input');
   const button = document.querySelector('button');
   const money = document.querySelector('#money');
   const each = document.querySelector('#each');
-  let tip = billAmount * serviceRate / numberOfWaiters;
 
   function calculateTip() {
-    if (billAmount === '' || serviceRate === 0) {
-      return alert('You need to fill in all the fields!');
-    };
+    const bill = billInput.value;
+    const service = serviceSelect.value;
+    const share = shareInput.value;
+    let tip = (bill * service) / share;
+    tip = (Math.floor(tip * 100) / 100).toFixed(2);
 
-    if (numberOfWaiters === '' || numberOfWaiters <= 1) {
-      numberOfWaiters = 1;
+    if (bill === '' || share === '' || service === 0) {
+      alert('You need to fill in all the fields!');
+      return;
+    }
+
+    if (share === '' || share <= 1) {
+      share = 1;
       each.style.display = 'none';
     } else {
       each.style.display = 'block';
-    };
+    }
 
-    tip = Math.round(tip * 100) / 100;
-    tip = tip.toFixed(2);
-
-    summary.style.display = 'block';
     money.textContent = tip;
-
   }
-
-  summary.style.display = 'none';
-  each.style.display = 'none';
 
   button.addEventListener('click', calculateTip);
 
